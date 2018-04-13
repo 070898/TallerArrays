@@ -15,7 +15,7 @@ import java.io.OutputStreamWriter;
  * @author Alison Juliana López C.
  *
  */
-public class progresionAritmetica {
+public class progresionAritmetica5 {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
