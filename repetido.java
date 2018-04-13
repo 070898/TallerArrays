@@ -11,18 +11,18 @@ import java.io.*;
  * @author Alison Juliana Lòpez C.
  *
  */
-public class Problema3 {
+public class repetido {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
 	 * @return = Retorna arreglo de enteros.
 	 */
-	public static int[] arreglo (String datos [])
+	public static int[] array (String datos [])
 	{
-		int [] valores = new int [datos.length]; 
+		int [] entero = new int [datos.length]; 
 		for (int i= 0; i<datos.length; i++)
-			valores[i] = Integer.parseInt(datos[i]);
-		return valores;
+			entero[i] = Integer.parseInt(datos[i]);
+		return entero;
 	}
 	/**
 	 * @param args
@@ -33,21 +33,21 @@ public class Problema3 {
 			BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
 			String n = br.readLine(); //Se lee la entrada.
 			String [] datos = n.split(","); //Se almacenan los datos de entrada en un arraglo de Strings.
-			int [] valores = arreglo(datos); //Se llama a la función para crear el arreglo de enteros.
+			int [] entero = array(datos); //Se llama a la función para crear el arreglo de enteros.
 			
-			int acum; 
-			int respuesta =0;
-			for (int i= 0; i<valores.length; i++) { 
-				acum= 0; //Se deja el acumulador nuevamente en cero para empezar otra vez.
-				for (int j=0; j<valores.length; j++) 
+			int acumulador; 
+			int resp =0;
+			for (int i= 0; i<entero.length; i++) { 
+				acumulador= 0; //Se deja el acumulador nuevamente en cero para empezar otra vez.
+				for (int j=0; j<entero.length; j++) 
 				{	
-					if (valores[i] == valores[j]) //Si el número está dos veces, el acumulador será igual a 2.
-						acum ++;				
+					if (entero[i] == entero[j]) //Si el número está dos veces, el acumulador será igual a 2.
+						acumulador ++;				
 				}		
-			if (acum != 2) //Si el acumulador no es 2, quiere decir que el número no está repetido.
-				respuesta = valores[i];
+			if (acumulador != 2) //Si el acumulador no es 2, quiere decir que el número no está repetido.
+				resp = entero[i];
 			}
-			bw.write("Respuesta: " + respuesta);
+			bw.write("Respuesta: " + resp);
 			bw.flush();
 		}
 		catch (Exception ex) {}
