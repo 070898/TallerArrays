@@ -11,23 +11,23 @@ import java.io.*;
  * @author Alison Juliana Lòpez C.
  *
  */
-public class Problema1 {
+public class diferencia {
 	/**
 	 * 
 	 * @param arreglo = Arreglo que contiene la serie de números que se ingresarán por consola.
 	 * @param k = Resultado que se debe obtener para que sume el acumulador.
 	 * @return acumu = Se sumará uno cada vez que se cumpla la condición.
 	 */
-	public static int salida(int [] arreglo, int k) 
+	public static int salida(int [] array, int k) 
 	{
-		int acum=0;
-		for (int i= 0; i<arreglo.length; i++) {
-			for(int j = 0; j<arreglo.length; j++) {
-				if (arreglo[i] - arreglo[j] == k)
-					acum ++;
+		int acumulador=0;
+		for (int i= 0; i<array.length; i++) {
+			for(int j = 0; j<array.length; j++) {
+				if (array[i] - array[j] == k)
+					acumulador ++;
 			}
 		}
-		return acum;
+		return acumulador;
 	}
 	
 	/**
@@ -39,7 +39,7 @@ public class Problema1 {
 			BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (System.out)); //Buffer para imprimir.
 			String serie; //Se leerá la línea de números ingresados.
 			
-			bw.write("Ingrese números separados por comas: ");
+			bw.write("Ingrese los números separados por comas: ");
 			bw.flush();	
 			serie = br.readLine(); //Se ingresa línea.
 			bw.write("Ingrese 'k': ");
@@ -47,11 +47,11 @@ public class Problema1 {
 			int k = Integer.parseInt(br.readLine()); //Se ingresa K.
 			
 			String [] datos = serie.split(",");
-			int [] arreglo = new int [datos.length]; //Se almacenarán los datos.
+			int [] array = new int [datos.length]; //Se almacenarán los datos.
 			for (int i= 0; i<datos.length ; i++) //Se almacenan los datos del vector de strings, en uno de enteros.
-				arreglo [i] = Integer.parseInt(datos[i]);
+				array [i] = Integer.parseInt(datos[i]);
 			
-			bw.write(""+salida(arreglo, k)); //Se imprime llamando a la función.
+			bw.write(""+salida(array, k)); //Se imprime llamando a la función.
 			bw.flush();
 			
 		}
