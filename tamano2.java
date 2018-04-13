@@ -11,7 +11,7 @@ import java.io.*;
  * @author Aliosn Juliana Lòpez C.
  *
  */
-public class tamano {
+public class tamano2 {
 	/**
 	 * 
 	 * @param array = Arreglo que se usará.
