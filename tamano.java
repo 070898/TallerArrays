@@ -8,21 +8,21 @@ import java.io.*;
  */
 
 /**
- * @author Alison Juliana Lòpez C.
+ * @author Aliosn Juliana Lòpez C.
  *
  */
-public class Problema2 {
+public class tamano {
 	/**
 	 * 
 	 * @param array = Arreglo que se usará.
 	 * @return = Retorna la multiplicación de todos los números dentro del arreglo.
 	 */
-	public static int mult (int array[]) //Resultado de multiplicación.
+	public static int multiplicacion (int array[]) //Resultado de multiplicación.
 	{
-		int acum = 1;
+		int acumulador = 1;
 		for (int i= 0; i<array.length; i++)
-			acum *= array[i];
-		return acum;
+			acumulador *= array[i];
+		return acumulador;
 	}
 	/**
 	 * 
@@ -47,16 +47,16 @@ public class Problema2 {
 			BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
 			String n = br.readLine(); //Se lee la entrada.
 			String [] datos = n.split(","); //Se almacenan los datos de entrada en un arraglo de Strings.
-			int [] valores = new int [datos.length]; //Se crea un arreglo igual al tamaño del arreglo de Strings.
+			int [] entero = new int [datos.length]; //Se crea un arreglo igual al tamaño del arreglo de Strings.
 			for (int i= 0; i<datos.length; i++)//Se pasa el vector de Strings a vector de enteros.
-				valores[i] = Integer.parseInt(datos[i]);
+				entero[i] = Integer.parseInt(datos[i]);
 			
-			int mult = mult(valores); //Se almacena el resultado de la función dentro de un entero para posteriormente usarlo.
-			int [] salida = new int [valores.length]; //Se crea el arreglo de salida.
-			for (int j=0 ; j<salida.length; j++) //Se realiza la inversa de la multiplicación.
-				salida[j] = mult/valores[j];
+			int multiplicacion = multiplicacion(entero); //Se almacena el resultado de la función dentro de un entero para posteriormente usarlo.
+			int [] resp = new int [entero.length]; //Se crea el arreglo de salida.
+			for (int j=0 ; j<resp.length; j++) //Se realiza la inversa de la multiplicación.
+				resp[j] = multiplicacion/entero[j];
 			
-			print(salida);
+			print(resp);
 		}
 		catch(Exception ex) {}
 	}
