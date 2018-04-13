@@ -15,18 +15,18 @@ import java.io.OutputStreamWriter;
  * @author Alison Juliana López C.
  *
  */
-public class Problema5 {
+public class progresionAritmetica {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
 	 * @return = Retorna arreglo de enteros.
 	 */
-	public static int[] arreglo (String datos [])
+	public static int[] array (String datos [])
 	{
-		int [] valores = new int [datos.length]; 
+		int [] entero = new int [datos.length]; 
 		for (int i= 0; i<datos.length; i++)
-			valores[i] = Integer.parseInt(datos[i]);
-		return valores;
+			entero[i] = Integer.parseInt(datos[i]);
+		return entero;
 	}
 	/**
 	 * @param args
@@ -37,16 +37,16 @@ public class Problema5 {
 			BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
 			String n = br.readLine(); //Se lee la entrada.
 			String [] datos = n.split(","); //Se almacenan los datos de entrada en un arraglo de Strings.
-			int [] valores = arreglo(datos); //Se llama a la función para crear el arreglo de enteros.
+			int [] entero = array(datos); //Se llama a la función para crear el arreglo de enteros.
 			
-			int respuesta =0;
-			int patr = valores[1] - valores[0]; //Se define el patrón de la secuencia.
-			for (int i = 1; i<valores.length; i++) { 
-				if (valores [i]-valores[i-1] != patr) //Se busca dónde la sucesión no cumple la diferencia del patrón.
-					respuesta = valores [i-1] + patr; //Se obtiene el número faltante.
+			int resp =0;
+			int patron = entero[1] - entero[0]; //Se define el patrón de la secuencia.
+			for (int i = 1; i<entero.length; i++) { 
+				if (entero [i]-entero[i-1] != patron) //Se busca dónde la sucesión no cumple la diferencia del patrón.
+					resp = entero [i-1] + patron; //Se obtiene el número faltante.
 				
 			}
-			bw.write("Respuesta: "+respuesta);
+			bw.write("Respuesta: "+resp);
 			bw.flush();
 			
 		}
