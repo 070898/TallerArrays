@@ -11,7 +11,7 @@ import java.io.*;
  * @author Alison Juliana Lòpez C.
  *
  */
-public class diferencia {
+public class diferencia1 {
 	/**
 	 * 
 	 * @param arreglo = Arreglo que contiene la serie de números que se ingresarán por consola.
