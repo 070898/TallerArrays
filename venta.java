@@ -12,18 +12,18 @@ import java.io.*;
  * @author Alison Juliana López C.
  *
  */
-public class Problema4 {
+public class venta {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
 	 * @return = Retorna arreglo de enteros.
 	 */
-	public static int[] arreglo (String datos [])
+	public static int[] array (String datos [])
 	{
-		int [] valores = new int [datos.length]; 
+		int [] entero = new int [datos.length]; 
 		for (int i= 0; i<datos.length; i++)
-			valores[i] = Integer.parseInt(datos[i]);
-		return valores;
+			entero[i] = Integer.parseInt(datos[i]);
+		return entero;
 	}
 	/**
 	 * @param args
@@ -34,13 +34,13 @@ public class Problema4 {
 			BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
 			String n = br.readLine(); //Se lee la entrada.
 			String [] datos = n.split(","); //Se almacenan los datos de entrada en un arraglo de Strings.
-			int [] valores = arreglo(datos); //Se llama a la función para crear el arreglo de enteros.;
+			int [] entero = array(datos); //Se llama a la función para crear el arreglo de enteros.;
 			
 			int benef =0, temp =0, max=0; //benef = Diferencia de valores. temp = Variable auxiliar. max = Beneficio máximo.
-			for (int i =0; i< valores.length; i++) { 
-				for (int j = valores.length-1; j>i; j--) //Iteración inversa que se detiene en el índice del for anterior.
+			for (int i =0; i< entero.length; i++) { 
+				for (int j = entero.length-1; j>i; j--) //Iteración inversa que se detiene en el índice del for anterior.
 				{
-					benef = valores[j] - valores[i]; //Operación para hay beneficio.
+					benef = entero[j] - entero[i]; //Operación para beneficio.
 					if (benef > temp) { //Comprobación de beneficio máximo.
 						if(max < benef) //Condicional para que el máximo no se reemplace siempre.
 						max= benef;
