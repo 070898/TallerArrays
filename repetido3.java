@@ -11,7 +11,7 @@ import java.io.*;
  * @author Alison Juliana Lòpez C.
  *
  */
-public class repetido {
+public class repetido3 {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
