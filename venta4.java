@@ -12,7 +12,7 @@ import java.io.*;
  * @author Alison Juliana López C.
  *
  */
-public class venta {
+public class venta4 {
 	/**
 	 * Pasa el arreglo de Strings a un arreglo de Enteros.
 	 * @param datos = Arreglo de String que se recibe.
